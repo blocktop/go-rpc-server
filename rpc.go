@@ -20,7 +20,7 @@ import (
 	"net/http"
 	"strconv"
 
-	consensus "github.com/blckit/go-consensus"
+	consensus "github.com/blocktop/go-consensus"
 	grpc "github.com/gorilla/rpc"
 	"github.com/gorilla/rpc/json"
 	"github.com/spf13/viper"
