@@ -21,11 +21,11 @@ import (
 	"strconv"
 
 	consensus "github.com/blocktop/go-consensus"
+	kernel "github.com/blocktop/go-kernel"
 	grpc "github.com/gorilla/rpc"
 	"github.com/gorilla/rpc/json"
 	"github.com/spf13/viper"
 )
-
 
 func Start() {
 	s := grpc.NewServer()
@@ -40,4 +40,5 @@ func Start() {
 
 func registerServices(s *grpc.Server) {
 	s.RegisterService(new(consensus.RPC), "Consensus")
+	s.RegisterService(new(kernel.RPC), "Kernel")
 }
